@@ -45,6 +45,7 @@ public class FreshChatSdkModule extends ReactContextBaseJavaModule {
         FreshchatUser user = Freshchat.getInstance(getReactApplicationContext()).getUser();
         user.setFirstName(firstName).setLastName(lastName).setEmail(email).setPhone(countryCode,phone);
         Freshchat.getInstance(getReactApplicationContext()).setUser(user);
+        Freshchat.getInstance(getReactApplicationContext()).identifyUser(userId, null);
     }
 
     @ReactMethod
